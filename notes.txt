@@ -13,6 +13,8 @@ npm i react-simple-typewriter
 
 npm install resend
 
+npm install resend
+
 
 npm i @react-email/components @react-email/tailwind
 
