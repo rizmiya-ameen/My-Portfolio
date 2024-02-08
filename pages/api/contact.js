@@ -5,21 +5,21 @@ const transporter = nodemailer.createTransport({
   port: 465,
   secure: true,
   auth: {
-    user: "aladhanriz@gmail.com",
-    pass: "tkznbdpoyjsgljhf",
+    user: process.env.EMAIL,
+    pass: process.env.EMAIL_PASS,
   },
 });
 
 export default async function handler(req, res) {
   const { name, email, message } = req.body;
 
-  const user = "aladhanriz@gmail.com";
+  const user = process.env.EMAIL;
 
-  const data = {
-    name,
-    email,
-    message,
-  };
+  // const data = {
+  //   name,
+  //   email,
+  //   message,
+  // };
 
   try {
     const mail = await transporter.sendMail({
