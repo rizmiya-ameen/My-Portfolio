@@ -117,6 +117,7 @@ const Contact = () => {
 
       <form
         onSubmit={handleSubmit}
+        autoComplete="off"
         className="mt-6 flex flex-col mx-auto w-[min(100%,38rem)]"
       >
         <input
@@ -159,9 +160,8 @@ const Contact = () => {
           readOnly={loading}
         />
 
-
         <div className="flex justify-center">
-        <SubmitBtn loading={loading} />
+          <SubmitBtn loading={loading} />
         </div>
       </form>
     </motion.section>

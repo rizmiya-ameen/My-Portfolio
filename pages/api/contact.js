@@ -15,12 +15,6 @@ export default async function handler(req, res) {
 
   const user = process.env.EMAIL;
 
-  // const data = {
-  //   name,
-  //   email,
-  //   message,
-  // };
-
   try {
     const mail = await transporter.sendMail({
       from: user,

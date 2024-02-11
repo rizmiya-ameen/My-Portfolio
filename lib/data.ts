@@ -8,6 +8,8 @@ import image3 from "@/public/image3.png";
 import image5 from "@/public/image5.png";
 import image6 from "@/public/image6.png";
 import image7 from "@/public/image7.png";
+import image8 from "@/public/image8.png";
+import image9 from "@/public/image9.png";
 
 export const links = [
   {
@@ -95,11 +97,25 @@ export const projectsData = [
     imageUrl: "",
   },*/
   {
+    title: "PostHub",
+    description:
+      "Unleash your tech insights, experiences, and tips on PostHub - where tech enthusiasts connect and collaborate. Join the conversation and let your tech tales inspire others.",
+    tags: ["React", "MUI", "JavaScript", "Figma",],
+    imageUrl: image8,
+  },
+  {
     title: "Book Worm",
     description:
       "A space for users to explore books, add them to their personal bookshelf, and effectively organize and track their book collection.",
     tags: ["React", "MUI", "JavaScript", "Figma",],
     imageUrl: image5,
+  },
+  {
+    title: "ElectroSwift",
+    description:
+      "Explore, shop, and experience the future of online shopping with us. Discover the latest gadgets and tech essentials. Your journey to a tech-filled paradise begins here! ",
+    tags: ["React", "JavaScript", "Tailwind",],
+    imageUrl: image9,
   },
   {
     title: "Weather Forecast",

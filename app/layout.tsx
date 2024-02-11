@@ -29,7 +29,7 @@ const dancing = Dancing_Script({
 
 export const metadata: Metadata = {
   title: 'Rizmiya | Portfolio',
-  description: 'Rizmiya is a React Web Developer',
+  description: 'Passionate React learner building meaningful and intuitive web interfaces. This portfolio reflects my enthusiasm for crafting delightful user experiences and my commitment to continuous improvement. Eager to apply my skills and contribute to projects that make a difference.'
 }
 
 export default function RootLayout({
@@ -44,7 +44,7 @@ export default function RootLayout({
       
         <ActiveSectionContextProvider>
           {children}
-          <Toaster position="top-right" />
+          <Toaster position="top-center" />
         </ActiveSectionContextProvider>
         
       </body>
