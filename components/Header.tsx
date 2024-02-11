@@ -25,7 +25,7 @@ export default function Header() {
           className='transition duration-200 ease-in-out'
           href="#home"
           >
-            <p className="font-dancing text-3xl font-extrabold bg-gradient-to-r from-cyan-500 to-indigo-500 text-transparent bg-clip-text">
+            <p className="font-dancing md:text-2xl lg:text-3xl font-extrabold bg-gradient-to-r from-cyan-500 to-indigo-500 text-transparent bg-clip-text">
               &lt;Rizmiya /&gt;</p>
           </a>
         </div>

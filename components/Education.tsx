@@ -10,7 +10,7 @@ const Education = () => {
   const { ref } = useSectionInView("Resume", 0.4);
 
   return (
-    <section id="resume" ref={ref} className="px-5 sm:px-28 leading-7 py-28 min-h-[100vh] text-center">
+    <section id="resume" ref={ref} className="px-5 md:px-10 lg:px-28 leading-7 py-28 min-h-[100vh] text-center">
 
       <div className="relative">
         <SectionHeading>Summary</SectionHeading>

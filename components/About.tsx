@@ -43,8 +43,8 @@ export default function About() {
         </h1>
       </div>
 
-      <div className="flex flex-col sm:flex-row sm:mt-[90px]">
-        <div className="flex-[2] text-justify sm:mx-20 sm:text-lg">
+      <div className="flex flex-col lg:flex-row lg:mt-[90px]">
+        <div className="flex-[2] text-justify lg:mx-20 lg:text-lg">
           <p className="text-xl leading-[80px]">
             Hi, I&apos;m{" "}
             <span className="font-bold underline decoration-sky-500 text-xl">
@@ -64,7 +64,7 @@ export default function About() {
             my family.
           </p>
 
-          <p className="sm:mt-[30px] mb-8 sm:mb-16">
+          <p className="lg:mt-[30px] mb-8 lg:mb-16">
             <strong>Interests: </strong>Photography, Reading, Writing,
             Gardening, Cooking/Baking
           </p>
@@ -80,7 +80,7 @@ export default function About() {
           </div>
         </div>
 
-        <div className="flex flex-1 flex-col p-4 sm:p-10 sm:pt-[76px] sm:text-lg">
+        <div className="flex flex-1 flex-col p-4 lg:p-10 lg:pt-[76px] lg:text-lg">
           <div className="flex flex-col items-start ">
             <p>
               <strong>Email: </strong>
@@ -100,7 +100,7 @@ export default function About() {
               <strong>Contact: </strong>(+61) 432 383 938
             </p>
             <hr className="w-full border-t-1 border-gray-300 my-2" />
-            <p className="mb-16 sm:mb-[100px]">
+            <p className="mb-16 lg:mb-[100px]">
               <strong>Languages: </strong>English, Tamil, Sinhala
             </p>
           </div>
