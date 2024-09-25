@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <footer className="relative py-5 px-4 text-center text-gray-400 bg-gray-800 w-full h-full">
       <small className="mb-2 block text-xs">
-        &copy; 2023 Rizmiya. All rights reserved.
+        &copy; 2024 Rizmiya. All rights reserved.
       </small>
       <p className="text-xs">
         <span className="font-semibold">About this website:</span> built with
