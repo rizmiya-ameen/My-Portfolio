@@ -3,18 +3,18 @@ import { BsFillArrowUpCircleFill } from "react-icons/bs";
 
 const Footer = () => {
   return (
-    <footer className="relative py-5 px-4 text-center text-gray-400 bg-gray-800 w-full h-full">
+    <footer className="relative py-5 px-4 text-center text-gray-400 bg-gray-800 dark:bg-slate-900 w-full h-full">
       <small className="mb-2 block text-xs">
-        &copy; 2024 Rizmiya. All rights reserved.
+        &copy; {new Date().getFullYear()} Fathima Rizmiya. All rights reserved.
       </small>
       <p className="text-xs">
-        <span className="font-semibold">About this website:</span> built with
-        React & Next.js (App Router & Server Actions), TypeScript, Tailwind CSS,
-        Framer Motion, Resend, Vercel hosting.
+        Built with Next.js, TypeScript, Tailwind CSS and Framer Motion. Hosted
+        on Vercel.
       </p>
 
       <a
-        className='absolute top-[-22px] right-10 text-[40px] text-gray-200 transition duration-200 ease-in-out'
+        className='absolute top-[-16px] right-8 text-[32px] text-gray-200 hover:text-white transition duration-200 ease-in-out'
+        aria-label="Back to top"
         href="#home"
         
       >

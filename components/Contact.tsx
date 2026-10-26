@@ -55,7 +55,7 @@ const Contact = () => {
     <motion.section
       id="contact"
       ref={ref}
-      className="flex flex-col w-full leading-7 px-5 pt-28 pb-16 min-h-[100vh] text-center bg-gradient-to-r from-indigo-500 to-cyan-500"
+      className="flex flex-col w-full leading-7 px-5 pt-20 pb-20 text-center bg-gradient-to-r from-indigo-500 to-cyan-500 dark:from-slate-900 dark:to-slate-900"
       initial={{
         opacity: 0,
       }}
@@ -69,14 +69,11 @@ const Contact = () => {
         once: true,
       }}
     >
-      <div className="relative text-white">
-        <SectionHeading>Get in Touch</SectionHeading>
-        <h1 className="hidden sm:inline sm:tracking-wide sm:absolute sm:top-0 sm:bottom-0 sm:right-0 sm:left-0 sm:text-[90px] sm:font-extrabold sm:opacity-[0.1] sm:text-white">
-          CONTACT
-        </h1>
+      <div className="text-white">
+        <SectionHeading watermark="Contact" onDark>Get in Touch</SectionHeading>
       </div>
 
-      <p className="text-gray-300 mt-5">
+      <p className="text-sm sm:text-base text-gray-100 dark:text-gray-300">
         Please contact me directly at{" "}
         <a className="underline" href="mailto:rizmiyaamin@gmail.com">
           rizmiyaamin@gmail.com
@@ -94,7 +91,7 @@ const Contact = () => {
           minLength={3}
           maxLength={150}
           required
-          className={`h-14 my-3 px-4 rounded-lg borderBlack ${
+          className={`h-12 my-3 px-4 text-sm rounded-lg borderBlack dark:bg-white/10 dark:text-white dark:placeholder-gray-400 ${
             loading && "text-gray-300 cursor-default"
           }`}
           autoComplete="off"
@@ -104,7 +101,7 @@ const Contact = () => {
         />
 
         <input
-          className={`h-14  px-4 rounded-lg borderBlack ${
+          className={`h-12 px-4 text-sm rounded-lg borderBlack dark:bg-white/10 dark:text-white dark:placeholder-gray-400 ${
             loading && "text-gray-300 cursor-default"
           }`}
           type="email"
@@ -118,7 +115,7 @@ const Contact = () => {
         />
 
         <textarea
-          className={`h-52 my-3 rounded-lg borderBlack p-4 ${
+          className={`h-44 my-3 text-sm rounded-lg borderBlack p-4 dark:bg-white/10 dark:text-white dark:placeholder-gray-400 ${
             loading && "text-gray-300 cursor-default"
           } `}
           name="message"

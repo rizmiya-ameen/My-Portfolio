@@ -1,15 +1,55 @@
-import React from "react";
-import { CgWorkAlt } from "react-icons/cg";
-import { FaReact } from "react-icons/fa";
-import { LuGraduationCap } from "react-icons/lu";
+import {
+  SiAmazonaws,
+  SiCss3,
+  SiDocker,
+  SiFastapi,
+  SiFigma,
+  SiFramer,
+  SiGithub,
+  SiGooglecloud,
+  SiHtml5,
+  SiJavascript,
+  SiMui,
+  SiNextdotjs,
+  SiNumpy,
+  SiOpenai,
+  SiOpencv,
+  SiPandas,
+  SiPowerbi,
+  SiPython,
+  SiPytorch,
+  SiReact,
+  SiScikitlearn,
+  SiTailwindcss,
+  SiTensorflow,
+  SiTypescript,
+  SiVercel,
+  SiVisualstudiocode,
+} from "react-icons/si";
+import {
+  TbAdjustmentsHorizontal,
+  TbBrain,
+  TbChartBar,
+  TbChartDots,
+  TbCloud,
+  TbCode,
+  TbEye,
+  TbLanguage,
+  TbLink,
+  TbMessageChatbot,
+  TbMoodSmile,
+  TbNetwork,
+  TbSparkles,
+  TbTransform,
+  TbWorldUpload,
+} from "react-icons/tb";
 import image1 from "@/public/image1.png";
-import image2 from "@/public/image2.png";
-import image3 from "@/public/image3.png";
+import image10 from "@/public/image10.png";
+import image12 from "@/public/image12.png";
 import image5 from "@/public/image5.png";
-import image6 from "@/public/image6.png";
-import image7 from "@/public/image7.png";
 import image8 from "@/public/image8.png";
 import image9 from "@/public/image9.png";
+import type { Certification, ProjectData, ResumeItem } from "./types";
 
 export const links = [
   {
@@ -39,188 +79,223 @@ export const links = [
 ] as const;
 //its not any string, we trying to be more specific, so the exact same string
 
-export const experiencesData = [
+// Resume section: newest first. `org` and `location` share a line under the title.
+export const experiencesData: ResumeItem[] = [
   {
-    title: "Teacher - Secondary",
-    location: "Ministry of Education, SL / 2019 - 2022",
+    title: "Web Developer | AI Integration",
+    org: "Bookolog.lk",
+    location: "Sri Lanka",
+    date: "2023 – Present",
+    url: "https://bookolog.lk",
     description:
-      "Instructed advanced-level students through lectures, practical sessions, and demonstrations.",
-    icon: React.createElement(LuGraduationCap),
-    //<LuGraduationCap /> can use this if its a jsx or tsx
-    //date: "2019",
+      "Integrated a DeepSeek powered AI assistant that helps customers discover books and get answers to queries about delivery, returns, and payments. Also contributed to website features and functionality to improve the overall user experience.",
   },
   {
-    title: "Temporary Lecturer",
-    location: "Uva Wellassa University, SL / 2016 - 2018",
+    title: "Science Educator",
+    org: "Universities & secondary schools",
+    location: "Sri Lanka",
+    date: "2016 – 2022",
     description:
-      "Delivered weekly lectures, conducted practical sessions and mentored students at all levels.",
-    icon: React.createElement(CgWorkAlt),
-    //date: "2019 - 2021",
+      "Taught science across university and secondary school settings, delivering lectures, conducting laboratory practicals, and mentoring students. Developed strong communication and analytical skills through explaining complex scientific concepts to diverse audiences.",
   },
-  {
-    title: "Demonstrator",
-    location: "University of Peradeniya, SL / 2016",
-    description:
-      "Conducted tutorial classes, practical sessions and assisted undergraduate students.",
-    icon: React.createElement(FaReact),
-    date: "2021 - present",
-  },
-] as const;
+];
 
-
-export const educationsData = [
+export const educationsData: ResumeItem[] = [
   {
-    title: "React Development",
-    location: "General Assembly, Melbourne / 2023",
+    title: "MSc in Artificial Intelligence (Hons)",
+    org: "Ural Federal University",
+    location: "Russia",
+    date: "2024 – 2026",
     description:
-      "Enrolled via the Digital Jobs Program, Victoria, and acquired a range of skills, catalyzing a transformative journey in my career.", 
-    icon: React.createElement(LuGraduationCap),
-    //<LuGraduationCap /> can use this if its a jsx or tsx
-    date: "2019",
+      "Thesis: an interpretable, motif-aware graph neural network that predicts molecular toxicity and explains each prediction through chemical substructures (0.817 ROC-AUC on Tox21).",
   },
   {
     title: "Bachelor of Science (Hons)",
-    location: "University of Peradeniya, SL / 2011 - 2015",
+    org: "University of Peradeniya",
+    location: "Sri Lanka",
+    date: "2011 – 2015",
     description:
-      "Completed a full-time, 4-year program with major in Chemistry and minor in Computer Science.",
-    icon: React.createElement(CgWorkAlt),
-    date: "2019 - 2021",
+      "Four-year honours degree with a major in Chemistry and a minor in Computer Science.",
   },
-] as const;
+];
 
-export const projectsData = [
-  /*{
-    title: "Bookolog",
-    description:
-      "This empowers users to delve into a rich library of books. Also, it enables users to seamlessly exchange, lend, and borrow books with like-minded enthusiasts",
-    tags: ["NextJS", "React", "tailwind", "SQL", "Docker",],
-    imageUrl: "",
-  },*/
+export const certificationsData: Certification[] = [
   {
-    title: "PostHub",
-    description:
-      "Unleash your tech insights, experiences, and tips on PostHub - where tech enthusiasts connect and collaborate. Join the conversation and let your tech tales inspire others.",
-    tags: ["React", "MUI", "JavaScript", "Figma",],
-    imageUrl: image8,
+    title: "Machine Learning Specialization",
+    issuer: "DeepLearning.AI & Stanford University (Coursera)",
+    date: "2026",
+    url: "https://www.linkedin.com/in/fathima-rizmiya/details/certifications/",
   },
   {
-    title: "Book Worm",
+    title: "React Development",
+    issuer: "General Assembly, Melbourne",
+    date: "2023",
+    url: "https://www.linkedin.com/in/fathima-rizmiya/details/certifications/",
+  },
+];
+
+export const projectsData: ProjectData[] = [
+  // to add a project: put a screenshot in public/imageN.png and import it like the others
+  // (imageUrl is optional; without it the card shows a placeholder panel)
+  {
+    title: "AI Research Agent",
+    category: "AI & ML",
     description:
-      "A space for users to explore books, add them to their personal bookshelf, and effectively organize and track their book collection.",
-    tags: ["React", "MUI", "JavaScript", "Figma",],
-    imageUrl: image5,
+      "A tool-using LLM agent that decides when to search the web or Wikipedia, then writes a concise, sourced summary. Served through a FastAPI web UI and a CLI.",
+    tags: ["Python", "LangChain", "Gemini", "FastAPI"],
+    imageUrl: image10,
+    githubUrl: "https://github.com/rizmiya-ameen/Python-AI-Research-Agent",
+    liveUrl: "https://python-ai-agent-lake.vercel.app/",
   },
   {
-    title: "ElectroSwift",
+    title: "Interpretable GNN for Toxicity Prediction",
+    category: "AI & ML",
     description:
-      "Explore, shop, and experience the future of online shopping with us. Discover the latest gadgets and tech essentials. Your journey to a tech-filled paradise begins here! ",
-    tags: ["React", "JavaScript", "Tailwind",],
-    imageUrl: image9,
-  },
-  {
-    title: "Weather Forecast",
-    description:
-      "A simple and user-friendly weather forecast application that provides up-to-date weather information for any location worldwide.",
-    tags: ["React", "JavaScript", "Tailwind",],
-    imageUrl: image2,
+      "MSc thesis. A motif-aware graph neural network that predicts genotoxicity on Tox21 and explains each prediction through chemical substructures. 0.817 ROC-AUC on a scaffold split.",
+    tags: ["Python", "PyTorch", "PyTorch Geometric", "RDKit", "XAI"],
+    imageUrl: image12,
+    githubUrl:
+      "https://github.com/rizmiya-ameen/Interpretable-GNN-Toxicity-Prediction",
   },
   {
     title: "Article Summarizer",
+    category: "AI Web App",
     description:
-      "AI-Powered Article Summarizer! Extract concise summaries from articles. Powered by OpenAI and Rapid API for accurate summarization",
-    tags: ["React", "Vite", "Tailwind", "Redux",],
+      "Paste an article URL and get a concise summary, generated by an OpenAI model through a RapidAPI endpoint.",
+    tags: ["React", "Redux", "OpenAI", "Tailwind"],
     imageUrl: image1,
+    githubUrl: "https://github.com/rizmiya-ameen/OpenAI-Article-Summarizer",
+    liveUrl: "https://open-ai-article-summarizer.vercel.app",
   },
   {
-    title: "Personal Portfolio",
+    title: "PostHub",
+    category: "Full-Stack Web App",
     description:
-      "A digital snapshot of my journey, captured in my Next.js-powered personal portfolio. Explore my skills and projects",
-    tags: ["NextJS", "React", "TypeScript", "Tailwind", "Framer motion"],
-    imageUrl: image7,
+      "A blogging platform for tech posts. Users sign in, create and edit posts with images and links, tag them by topic and manage everything from a personal dashboard.",
+    tags: ["Next.js", "TypeScript", "MongoDB", "Prisma", "NextAuth"],
+    imageUrl: image8,
+    githubUrl: "https://github.com/rizmiya-ameen/Post-Hub",
+    liveUrl: "https://post-hub-rizmiya.vercel.app",
   },
   {
-    title: "To-Do List",
+    title: "ElectroSwift",
+    category: "Full-Stack Web App",
     description:
-      "A feature-rich To-Do List web application with task prioritization, filtering, and a clean user interface.",
-    tags: ["React", "JavaScript", "CSS"],
-    imageUrl: image6,
+      "An electronics store with product search, reviews and ratings, a shopping cart, Stripe checkout and an admin dashboard for managing products and orders.",
+    tags: ["Next.js", "TypeScript", "MongoDB", "Prisma", "Stripe"],
+    imageUrl: image9,
+    githubUrl: "https://github.com/rizmiya-ameen/E-Commerce",
+    liveUrl: "https://electroswift-rizmiya.vercel.app/",
   },
+  {
+    title: "Book Worm",
+    category: "Web App",
+    description:
+      "Search and browse books by title or genre through the Google Books API, and organise them into To-Read, Reading and Completed shelves.",
+    tags: ["React", "Material UI", "Google Books API"],
+    imageUrl: image5,
+    githubUrl: "https://github.com/rizmiya-ameen/Book-Explorer",
+    liveUrl: "https://rizmiya-bookworm.surge.sh/",
+  },
+];
+
+// other projects, listed as plain links under the project grid
+export const earlierProjects = [
+  {
+    title: "Climate Forecasting & Power BI",
+    url: "https://github.com/rizmiya-ameen/Climate-Time-Series-Forecasting-PowerBI",
+  },
+  {
+    title: "YouTube Comment Sentiment Analyzer",
+    url: "https://github.com/rizmiya-ameen/YouTube-Comment-Sentiment-Analyzer",
+  },
+  {
+    title: "Fuel Tracker",
+    url: "https://github.com/rizmiya-ameen/Fuel-Tracker-Mobile-Application",
+  },
+  {
+    title: "Weather Forecast",
+    url: "https://rizmiya-weather-forecast.surge.sh/",
+  },
+  { title: "To-Do List", url: "https://rizmiya-todo-list.surge.sh/" },
   {
     title: "GIPHY Translator",
-    description:
-      "A user-friendly tool that turns words into the perfect GIF, with a weirdness slider.",
-    tags: ["React", "JavaScript", "CSS"],
-    imageUrl: image3,
-    //imageUrl: "/image3.png"
+    url: "https://rizmiya-giphy-translator.surge.sh/",
   },
-] as const;
+];
 
-
-
-
-export const skillsSet = [
+// Every skill uses a react-icons icon so they all render in the same single tone.
+export const skillCategories = [
   {
-    skill:"HTML5",
-    image: "/html-5.png"
+    title: "Machine Learning",
+    icon: TbBrain,
+    skills: [
+      { skill: "Python", icon: SiPython },
+      { skill: "PyTorch", icon: SiPytorch },
+      { skill: "TensorFlow", icon: SiTensorflow },
+      { skill: "Scikit-learn", icon: SiScikitlearn },
+      { skill: "Hugging Face", icon: TbMoodSmile },
+      { skill: "Machine Learning", icon: TbNetwork },
+      { skill: "Deep Learning", icon: TbBrain },
+      { skill: "NLP", icon: TbLanguage },
+      { skill: "Computer Vision", icon: TbEye },
+      { skill: "OpenCV", icon: SiOpencv },
+      { skill: "Feature Engineering", icon: TbTransform },
+      { skill: "Hyperparameter Tuning", icon: TbAdjustmentsHorizontal },
+    ],
   },
   {
-    skill:"CSS3",
-    image: "/css-3.png"
+    title: "LLM Integration",
+    icon: TbSparkles,
+    skills: [
+      { skill: "OpenAI API", icon: SiOpenai },
+      { skill: "Gemini API", icon: TbSparkles },
+      { skill: "DeepSeek API", icon: TbMessageChatbot },
+      { skill: "LangChain", icon: TbLink },
+      { skill: "Prompt Engineering", icon: TbMessageChatbot },
+    ],
   },
   {
-    skill:"JavaScript",
-    image: "/js.png"
+    title: "Data & Analytics",
+    icon: TbChartBar,
+    skills: [
+      { skill: "NumPy", icon: SiNumpy },
+      { skill: "Pandas", icon: SiPandas },
+      { skill: "Data Science", icon: TbChartDots },
+      { skill: "Power BI", icon: SiPowerbi },
+    ],
   },
   {
-    skill:"TypeScript",
-    image: "/typescript.png"
+    title: "Cloud & Deployment",
+    icon: TbCloud,
+    skills: [
+      { skill: "AWS", icon: SiAmazonaws },
+      { skill: "Google Cloud", icon: SiGooglecloud },
+      { skill: "Docker", icon: SiDocker },
+      { skill: "FastAPI", icon: SiFastapi },
+      { skill: "Vercel", icon: SiVercel },
+      { skill: "Surge", icon: TbWorldUpload },
+    ],
   },
   {
-    skill:"React",
-    image: "/react.png"
+    title: "Web & Tools",
+    icon: TbCode,
+    skills: [
+      { skill: "TypeScript", icon: SiTypescript },
+      { skill: "JavaScript", icon: SiJavascript },
+      { skill: "React", icon: SiReact },
+      { skill: "Next.js", icon: SiNextdotjs },
+      { skill: "Tailwind CSS", icon: SiTailwindcss },
+      { skill: "HTML5", icon: SiHtml5 },
+      { skill: "CSS3", icon: SiCss3 },
+      { skill: "MUI", icon: SiMui },
+      { skill: "Framer Motion", icon: SiFramer },
+      { skill: "GitHub", icon: SiGithub },
+      { skill: "VS Code", icon: SiVisualstudiocode },
+      { skill: "Figma", icon: SiFigma },
+    ],
   },
-  {
-    skill:"Next.js",
-    image:"/Nextjs.png"
-  },
-  {
-    skill:"Tailwind CSS",
-    image:"/tailwindcss.svg"
-  },
-  {
-    skill:"MUI",
-    image:"/MUI.png"
-  },
-  {
-    skill:"Docker",
-    image:"/docker.png"
-  },
-  {
-    skill:"Framer Motion",
-    image:"/framer-motion.png"
-  },
-  {
-    skill:"VS Code",
-    image:"/VSCode.png"
-  },
-  {
-    skill:"GitHub",
-    image:"/github.png"
-  },
-  {
-    skill:"Figma",
-    image:"/figma.png"
-  },
-  {
-    skill:"Vercel",
-    image:"/vercel.svg"
-  },
-  {
-    skill:"Surge",
-    image:"/surge-logo.svg"
-  },
-] as const;
-
+];
 
 /*
 "Joined through Digital Jobs Program, Victoria where I gained skills HTML, CSS, JavaScript, React, and Next.js, transforming my career journey.", "Enrolled via the Digital Jobs Program, Victoria, and acquired a range of skills, catalyzing a transformative journey in my career." Enrolled in the Digital Jobs Program, Victoria, I acquired a range of skills, catalyzing a transformative journey in my career.,

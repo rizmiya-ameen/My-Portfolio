@@ -1,10 +1,24 @@
 import "./globals.css";
 import type { Metadata } from "next";
-import { Inter, Croissant_One, Nunito, Dancing_Script } from "next/font/google";
+import {
+  Inter,
+  Croissant_One,
+  Nunito,
+  Dancing_Script,
+  Plus_Jakarta_Sans,
+} from "next/font/google";
 import ActiveSectionContextProvider from "@/context/active-section.context";
+import ThemeContextProvider from "@/context/theme-context";
 import { Toaster } from "react-hot-toast";
 
 const inter = Inter({ subsets: ["latin"] });
+
+// headings (h1-h4 via globals.css, or the `font-display` utility)
+const display = Plus_Jakarta_Sans({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-display",
+});
 
 const nunito = Nunito({
   subsets: ["latin"],
@@ -27,11 +41,40 @@ const dancing = Dancing_Script({
   weight: "700",
 });
 
+const siteTitle = "Fathima Rizmiya | AI & Machine Learning Engineer";
+const siteDescription =
+  "Portfolio of Fathima Rizmiya, an MSc Artificial Intelligence graduate in Melbourne developing explainable machine learning and deep learning models, and the apps that serve them.";
+
+// the preview image comes from app/opengraph-image.tsx
 export const metadata: Metadata = {
-  title: "Rizmiya | Portfolio",
-  description:
-    "Passionate React learner building meaningful and intuitive web interfaces. This portfolio reflects my enthusiasm for crafting delightful user experiences and my commitment to continuous improvement. Eager to apply my skills and contribute to projects that make a difference.",
+  metadataBase: new URL("https://rizmiya.com"),
+  title: siteTitle,
+  description: siteDescription,
+  openGraph: {
+    type: "website",
+    url: "/",
+    siteName: "Fathima Rizmiya",
+    title: siteTitle,
+    description: siteDescription,
+    locale: "en_AU",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: siteTitle,
+    description: siteDescription,
+  },
 };
+
+// runs before first paint so a saved (or system) dark preference doesn't flash light
+const themeScript = `
+(function () {
+  try {
+    var saved = localStorage.getItem("theme");
+    var dark = saved ? saved === "dark" : window.matchMedia("(prefers-color-scheme: dark)").matches;
+    if (dark) document.documentElement.classList.add("dark");
+  } catch (e) {}
+})();
+`;
 
 export default function RootLayout({
   children,
@@ -41,13 +84,19 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`!scroll-smooth ${nunito.variable} ${croissant.variable} ${dancing.variable}`}
+      className={`!scroll-smooth ${display.variable} ${nunito.variable} ${croissant.variable} ${dancing.variable}`}
+      suppressHydrationWarning
     >
-      <body className={`${inter.className} bg-slate-50 text-gray-950 relative`}>
-        <ActiveSectionContextProvider>
-          {children}
-          <Toaster position="top-center" />
-        </ActiveSectionContextProvider>
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: themeScript }} />
+      </head>
+      <body className={`${inter.className} bg-slate-50 text-gray-950 relative antialiased dark:bg-slate-800 dark:text-gray-100 transition-colors`}>
+        <ThemeContextProvider>
+          <ActiveSectionContextProvider>
+            {children}
+            <Toaster position="top-center" />
+          </ActiveSectionContextProvider>
+        </ThemeContextProvider>
       </body>
     </html>
   );

@@ -8,7 +8,7 @@ export default function SubmitBtn({loading}: any) {
   return (
     <button
       type="submit"
-      className="group mt-2 flex items-center justify-center gap-4 h-[3rem] w-[8rem] bg-gray-800 text-white rounded-md outline-none transition-all focus:scale-110 hover:scale-110 hover:bg-gray-950 active:scale-105  disabled:scale-100 disabled:bg-opacity-65"
+      className="group mt-2 flex items-center justify-center gap-3 h-11 w-[8rem] text-sm font-medium bg-gray-900 text-white rounded-full outline-none transition hover:bg-gray-950 dark:bg-white/10 dark:hover:bg-white/20 disabled:bg-opacity-65"
       disabled={loading}
     >
       {loading ? (
@@ -37,7 +37,7 @@ export default function SubmitBtn({loading}: any) {
 //   return (
 //     <button
 //       type="submit"
-//       className="group mt-2 flex items-center justify-center gap-4 h-[3rem] w-[8rem] bg-gray-800 text-white rounded-md outline-none transition-all focus:scale-110 hover:scale-110 hover:bg-gray-950 active:scale-105  disabled:scale-100 disabled:bg-opacity-65"
+//       className="group mt-2 flex items-center justify-center gap-4 h-[3rem] w-[8rem] bg-gray-800 text-white rounded-md outline-none transition-all focus:scale-110 hover:scale-110 hover:bg-gray-950 dark:bg-white/10 dark:hover:bg-white/20 active:scale-105  disabled:scale-100 disabled:bg-opacity-65"
 //       disabled={pending}
 //     >
 //       {pending ? (

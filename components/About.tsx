@@ -19,97 +19,118 @@ const fadeInAnimationVariants = {
   },
 };
 
+const focusAreas = [
+  "Machine Learning",
+  "Deep Learning",
+  "Graph Neural Networks",
+  "Explainable AI",
+  "NLP",
+  "LLM Agents",
+  "Model Deployment",
+  "AI Application Development",
+];
+
+const details = [
+  { label: "Location", value: "Melbourne, Australia" },
+  { label: "Languages", value: "English, Tamil, Sinhala" },
+];
+
 export default function About() {
   const { ref } = useSectionInView("About", 0.5);
 
   return (
     <motion.section
       ref={ref}
-      className="px-4 sm:px-14 mb-0 text-center leading-8 pt-28 min-h-[100vh]"
+      className="w-full max-w-[64rem] px-4 sm:px-8 pt-20 pb-10"
       variants={fadeInAnimationVariants}
       initial="initial"
       whileInView="animate"
       viewport={{
-        once: false,
+        once: true,
       }}
       id="about"
     >
-      <div className="relative">
-        <SectionHeading>Know Me Better</SectionHeading>
-        <h1 className="hidden sm:inline sm:tracking-wide sm:absolute sm:top-0 sm:bottom-0 sm:right-0 sm:left-0 sm:text-[90px] sm:font-extrabold sm:opacity-[0.1] sm:text-sky-500">
-          ABOUT ME
-        </h1>
-      </div>
+      <SectionHeading watermark="About">Who I Am</SectionHeading>
 
-      <div className="flex flex-col lg:flex-row lg:mt-[90px]">
-        <div className="flex-[2] text-justify lg:mx-20 lg:text-lg">
-          <p className="text-xl leading-[80px]">
-            Hi, I&apos;m{" "}
-            <span className="font-bold underline decoration-sky-500 text-xl">
-              Fathima Rizmiya
-            </span>
+      <div className="flex flex-col lg:flex-row gap-10 lg:gap-14">
+        <div className="flex-[3] text-[0.95rem] leading-7 text-gray-700 dark:text-gray-300">
+          <p className="mb-4">
+            I build machine learning solutions that connect data, research and
+            real world use, from data preparation and model development through
+            to evaluation and deployment.
           </p>
 
-          <p className="mb-3">
-            Armed with a Bachelor of Science degree and fueled by an unwavering
-            passion for education, I&apos;ve spent the last 7 years nurturing
-            students&apos; curiosity and igniting their love for science.
-            Recently, I ventured into the world of technology, through the
-            Victoria Digital Jobs Program. What I enjoy most about programming
-            is the thrill of problem-solving.
-            <br />
-            Beyond my career, I find solace in nature and cherish moments with
-            my family.
+          <p className="mb-4">
+            My MSc research focused on an interpretable graph neural network for
+            molecular toxicity prediction, combining deep learning with my
+            chemistry background to explore not only what a model predicts, but
+            why. My other projects span machine learning, deep learning, LLM
+            powered agents using LangChain, and web applications built with
+            React and Next.js.
           </p>
 
-          <p className="lg:mt-[30px] mb-8 lg:mb-16">
-            <strong>Interests: </strong>Photography, Reading, Writing,
-            Gardening, Cooking/Baking
+          <p>
+            Before transitioning into AI, I spent seven years teaching science.
+            Alongside my software development experience, this has strengthened
+            my analytical thinking, problem solving, and ability to communicate
+            complex ideas clearly. I aim to build AI solutions that are
+            reliable, interpretable, and practical.
           </p>
+        </div>
 
-          <div className="flex justify-center mb-8">
+        <div className="flex-[2] text-sm leading-6">
+          <div className="p-5 bg-white dark:bg-slate-700/40 border border-gray-200 dark:border-white/10 rounded-2xl">
+            <h3 className="mb-3 text-xs font-semibold uppercase tracking-[0.08em] text-sky-600 dark:text-sky-400">
+              Focus areas
+            </h3>
+            <ul className="flex flex-wrap gap-1.5">
+              {focusAreas.map((area) => (
+                <li
+                  key={area}
+                  className="rounded-md bg-gray-100 dark:bg-white/10 px-2 py-0.5 text-xs leading-5 font-medium text-gray-700 dark:text-gray-300"
+                >
+                  {area}
+                </li>
+              ))}
+            </ul>
+
+            <h3 className="mt-6 mb-1 text-xs font-semibold uppercase tracking-[0.08em] text-sky-600 dark:text-sky-400">
+              Details
+            </h3>
+            <dl className="divide-y divide-gray-200 dark:divide-white/10">
+              <div className="flex justify-between gap-4 py-2">
+                <dt className="text-gray-500 dark:text-gray-400">Email</dt>
+                <dd className="text-right">
+                  <a
+                    href="mailto:rizmiyaamin@gmail.com"
+                    className="text-sky-600 hover:underline dark:text-sky-400"
+                  >
+                    rizmiyaamin@gmail.com
+                  </a>
+                </dd>
+              </div>
+              {details.map((item) => (
+                <div
+                  key={item.label}
+                  className="flex justify-between gap-4 py-2"
+                >
+                  <dt className="text-gray-500 dark:text-gray-400">
+                    {item.label}
+                  </dt>
+                  <dd className="text-right text-gray-800 dark:text-gray-200">
+                    {item.value}
+                  </dd>
+                </div>
+              ))}
+            </dl>
+
             <a
-              className="group bg-gray-900 text-white px-6 py-2 flex items-center gap-2 rounded-full outline-none hover:bg-sky-600"
+              className="mt-5 flex w-full items-center justify-center gap-2 px-5 py-2.5 text-sm font-medium leading-5 text-white bg-gray-900 hover:bg-sky-600 dark:bg-sky-700 dark:hover:bg-sky-600 rounded-full outline-none transition"
               href="/CV.pdf"
               download
             >
               Download CV <HiDownload className="opacity-60" />
             </a>
-          </div>
-        </div>
-
-        <div className="flex flex-1 flex-col p-4 lg:p-10 lg:pt-[76px] lg:text-lg">
-          <div className="flex flex-col items-start ">
-            <p>
-              <strong>Email: </strong>
-              <a
-                href={`mailto:rizmiyaamin@gmail.com`}
-                className="text-pink-600"
-              >
-                rizmiyaamin@gmail.com
-              </a>
-            </p>
-            <hr className="w-full border-t-1 border-gray-300 my-2" />
-            <p>
-              <strong>From: </strong>Melbourne, Australia
-            </p>
-            <hr className="w-full border-t-1 border-gray-300 my-2" />
-            <p>
-              <strong>Contact: </strong>(+61) 432 383 938
-            </p>
-            <hr className="w-full border-t-1 border-gray-300 my-2" />
-            <p className="mb-16 lg:mb-[100px]">
-              <strong>Languages: </strong>English, Tamil, Sinhala
-            </p>
-          </div>
-
-          <div className="relative flex flex-col items-center justify-center leading-6">
-            <p className="text-[70px] mb-4 font-medium ">07</p>
-            <p>
-              Years of Work <br />
-              Experience
-            </p>
-            <div className="flex h-24 w-24 bg-sky-200 absolute rounded-full -z-30" />
           </div>
         </div>
       </div>

@@ -1,35 +1,52 @@
 # Rizmiya's Portfolio Website
 
-Welcome to my portfolio website built using React & Next.js (with App Router), TypeScript, Tailwind CSS, Framer Motion, and hosted on Vercel.
+Personal portfolio of Fathima Rizmiya, an MSc in Artificial Intelligence graduate based in Melbourne, focused on AI and machine learning engineering.
+
+**Live site:** [rizmiya.com](https://rizmiya.com)
 
 ![Screenshot](screenshot.png)
 
 ## Overview
 
-This portfolio website showcases my projects, skills, and experience in web development. It's built with modern web technologies to provide a smooth and engaging user experience.
+The site presents my AI and machine learning projects, technical skills, education, experience and certifications, with a downloadable CV and a contact form. Projects include an interpretable graph neural network for molecular toxicity prediction (my MSc thesis), an LLM research agent built with LangChain, and full-stack web applications built with Next.js.
 
 ## Technologies Used
 
-- React & Next.js (App Router)
-
+- Next.js 13 (App Router) and React 18
 - TypeScript
-
-- Tailwind CSS
-
-- Framer Motion: Framer Motion is used to add animations and transitions, enhancing the user interface.
-
-- Resend: Resend is integrated to handle email functionality for the contact form on the website.
-
-- Vercel Hosting: The website is hosted on Vercel, ensuring fast and reliable performance.
+- Tailwind CSS, with a light and dark theme
+- Framer Motion for animations and transitions
+- Nodemailer with Gmail SMTP for the contact form
+- Vercel for hosting
 
 ## Features
 
-- Responsive design to ensure a seamless experience across different devices.
-- A clean and modern user interface.
-- Integration of animations using Framer Motion.
-- Hosting on Vercel for fast and reliable performance.
+- Single-page layout: Home, About, Projects, Skills, Resume and Contact
+- Responsive design for mobile, tablet and desktop
+- Light and dark mode that remembers your choice
+- Project cards with screenshots, tech tags, and code and live demo links
+- Downloadable CV
+- Working contact form that sends messages by email
+- Open Graph preview image for sharing links
+
+<!-- ## Running Locally
+
+```bash
+npm ci
+npm run dev
+```
+
+Then open http://localhost:3000.
+
+The contact form needs a `.env.local` file in the project root:
+
+```
+EMAIL=your-gmail-address@gmail.com
+EMAIL_PASS=your-gmail-app-password
+```
+
+`EMAIL_PASS` is a Gmail App Password, not your normal password. Add the same two variables in Vercel under Settings → Environment Variables. -->
 
 ## Live Demo
 
-You can view the live version of the website here: [Rizmiya's Portfolio](https://rizmiya-portfolio.vercel.app/)
-
+[rizmiya.com](https://rizmiya.com)

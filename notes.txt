@@ -18,3 +18,7 @@ npm install resend
 
 npm i @react-email/components @react-email/tailwind
 
+
+TO RUN
+npm run dev
+

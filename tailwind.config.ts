@@ -6,6 +6,7 @@ const config: Config = {
     './components/**/*.{js,ts,jsx,tsx,mdx}',
     './app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
+  darkMode: 'class',
   theme: {
     extend: {
       backgroundImage: {
@@ -14,6 +15,7 @@ const config: Config = {
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
       fontFamily: {
+        display: ['var(--font-display)', 'sans-serif'],
         nunito: ['var(--font-Nunito)'],
         croissant: ['var(--font-Croissant_One)'],
         dancing: ['var(--font-Dancing_Script)'],
